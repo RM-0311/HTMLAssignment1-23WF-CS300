@@ -20,14 +20,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const roiResult = document.getElementById("roi-result");
 
   calculateButton.addEventListener("click", function () {
-      // Get input values
+      // Get input values and parse as numbers
       const initialInvestment = parseFloat(initialInvestmentInput.value);
       const revenue = parseFloat(revenueInput.value);
       const expenses = parseFloat(expensesInput.value);
 
       // Check for valid inputs
-      if (isNaN(initialInvestment) || isNaN(revenue) || isNaN(expenses)) {
-          roiResult.textContent = "Please enter valid numbers for all fields.";
+      if (isNaN(initialInvestment) || isNaN(revenue) || isNaN(expenses) || initialInvestment < 0 || revenue < 0) {
+          roiResult.textContent = "Please enter valid non-negative numbers for Initial Investment and Revenue.";
           return;
       }
 
