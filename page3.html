@@ -61,9 +61,23 @@
               To learn more about investment opportunities and get detailed financial information, please <a href="#">Contact Us</a>.
           </p>
       </div>
-      
+      <section>
+      <h2>ROI Calculator</h2>
+      <form id="roi-form">
+          <label for="initial-investment">Initial Investment:</label>
+          <input type="number" id="initial-investment" required>
+          <br>
+          <label for="revenue">Revenue:</label>
+          <input type="number" id="revenue" required>
+          <br>
+          <label for="expenses">Expenses:</label>
+          <input type="number" id="expenses" required>
+          <br>
+          <button type="button" id="calculate-button">Calculate ROI</button>
+      </form>
+      <div id="roi-result"></div>
   </section>
-  
+  </section>
     </main>
 
     <!-- Bootstrap JavaScript (placed at the end for faster page loading) -->
